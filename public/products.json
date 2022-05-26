@@ -1,0 +1,83 @@
+[
+    {
+      "img":"https://zenvo.com.bd/storage/2021/07/35-600x600.jpg",
+      "name": "mouse zenvo",
+      "price":"$12",
+      "minimumQuantity": 5,
+      "available": 50,
+      "shotDescription": "You can use it very smoothly"
+    },
+    {
+      "img":"https://m.media-amazon.com/images/I/71wFhV--jBL._AC_SS450_.jpg",
+      "name": "laptop cooler",
+      "price":"$15",
+      "minimumQuantity": 7,
+      "available": 45,
+      "shotDescription": "You can cool your laptop using it"
+    },
+    {
+      "img":"https://m.media-amazon.com/images/I/61DT+r681TL._AC_SL1500_.jpg",
+      "name": "redragon k552 keyboard",
+      "price":"$25",
+      "minimumQuantity":6,
+      "available": 40,
+      "shotDescription": "This is a best mechanical gaming keyboard"
+    },
+    {
+      "img":"https://cdn.mos.cms.futurecdn.net/HAKqTKChcmhFEAvpN7qeGh.jpg",
+      "name": "Motherboard",
+      "price":"$30",
+      "minimumQuantity": 7,
+      "available": 35,
+      "shotDescription": "This motherboard give you world best performance"
+    },
+    {
+      "img":"https://www.startech.com.bd/image/cache/catalog/ram/cosair/dominator-platinum-rgb-16gb/dominator-platinum-rgb-16gb-3-228x228.jpg",
+      "name": "RGB ram",
+      "price":"$12",
+      "minimumQuantity": 8,
+      "available": 30,
+      "shotDescription": "It help to build up your computer performance"
+    },
+    {
+      "img":"https://www.startech.com.bd/image/cache/catalog/casing/fantech/hexa-cg73/hexa-cg73-01-500x500.jpg",
+      "name": "RGB casing",
+      "price":"$18",
+      "minimumQuantity": 5,
+      "available": 30,
+      "shotDescription": "Best rgb casing under your budget"
+    },
+    {
+      "img":"https://www.startech.com.bd/image/cache/catalog/cpu-cooler/sapphire/nitro-plus-s240-a/nitro-plus-s240-a-01-500x500.jpg",
+      "name": "RGB cooler",
+      "price":"$13",
+      "minimumQuantity": 8,
+      "available": 20,
+      "shotDescription": "Best cooler for your pc"
+    },
+    {
+      "img":"https://cdn.arstechnica.net/wp-content/uploads/2022/01/12th-gen-mobile-chip-pose-10.jpeg",
+      "name": "inter cpu",
+      "price":"$11",
+      "minimumQuantity":4,
+      "available": 19,
+      "shotDescription": "Many cores make light work"
+    },
+    {
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFwuCrGAi4wO7rHmqo5RJHib-Il_aHTMotN_bY46Muf0dPQmf6th0gnBX2lPS5DseaaoI&usqp=CAU",
+      "name": "power supply",
+      "price":"$10",
+      "minimumQuantity":11,
+      "available": 23,
+      "shotDescription": "This power supply give you best performance"
+    },
+    {
+      "img":"https://cdn.shopify.com/s/files/1/0356/9850/7909/products/ZEB-USB300WFD-pic1_540x.jpg?v=1621059241",
+      "name": "Zebronic",
+      "price":"$3",
+      "minimumQuantity": 5,
+      "available": 12,
+      "shotDescription": "For best internet service, you need to use it"
+    }
+
+]

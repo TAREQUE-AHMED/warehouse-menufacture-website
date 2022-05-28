@@ -9,7 +9,7 @@ const Footer = () => {
                 <section>
                 <h5 className='text-white font-bold text-2xl uppercase pb-5'>About Us</h5>
                 <div className='bg-primary h-1 w-24 mb-5'></div>
-                <p className='text-xl text-gray-400'>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEytuCPcPd_vooXRJB0JCNlqIarvOU6faWkQ&usqp=CAU</p>
+                <p className='text-xl text-gray-400'>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEytuCPcPd</p>
                 <ul className='text-2xl text-gray-400 mt-5 flex gap-5'>
                     <li className='hover:text-white'>
                         <BsFacebook></BsFacebook>

@@ -3,11 +3,11 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import auth from '../../../firebase.init';
-import useToken from '../../CustomHooks/UserToken';
+import auth from '../firebase.init';
+// import useToken from '../../CustomHooks/UserToken';
 import Loading from '../Loading/Loading';
 
-const SignUp = () => {
+const Registration = () => {
     const navigate = useNavigate();
     const [
         createUserWithEmailAndPassword,
@@ -27,13 +27,13 @@ const SignUp = () => {
         toast.success('Profile Updated');
     }
 
-    const [token] = useToken(user);
+    // const [token] = useToken(user);
 
     if (loading || updating) {
         return <Loading></Loading>
     };
 
-    if (token) {
+    if (user) {
         navigate('/home');
     }
 
@@ -124,12 +124,12 @@ const SignUp = () => {
                         </label>
                     </div>
                     {signInError}
-                    <input className='btn w-full max-w-xs' type="submit" value="Login" />
-                    <p>New to .carBro???? <Link to={'/login'}><small className='text-secondary'>Create new account</small></Link></p>
+                    <input className='btn w-full max-w-xs' type="submit" value="Login"/>
+                    <p>You have already an account <Link to={'/login'}><small className='text-primary'>Login</small></Link></p>
                 </form>
             </div>    
         </div>
     )
 };
 
-export default SignUp;
+export default Registration;

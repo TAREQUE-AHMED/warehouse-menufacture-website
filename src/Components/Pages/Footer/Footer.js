@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BsFacebook, BsYoutube, BsTwitter, BsInstagram, BsFillTelephoneFill } from "react-icons/bs";
+import { BsFacebook, BsFillTelephoneFill, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { MdEmail, MdOutlineLocationOn } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -60,9 +60,9 @@ const Footer = () => {
                 <h5 className='text-white font-bold text-2xl uppercase'>Our Location</h5>
                 <div className='bg-primary h-1 w-36  mt-5'></div>
                 <ul className='text-xl text-gray-400 pl-0 grid grid-cols-1 gap-2 pt-5'>
-                    <li className='li flex gap-3 items-center text-xl text-gray-400'><MdOutlineLocationOn></MdOutlineLocationOn> H45-483, Uttara, Dhaka, Bangladesh </li>
-                    <li className='li flex gap-3 items-center text-xl text-gray-400'><MdEmail></MdEmail> carbro4747@gmail.com</li>
-                    <li className='li flex gap-3 items-center text-xl text-gray-400'><BsFillTelephoneFill></BsFillTelephoneFill> +0212555216</li>
+                    <li className='li flex gap-3 items-center text-xl text-gray-400'><MdOutlineLocationOn></MdOutlineLocationOn> 72/8, Rajarbagh, Malibagh, Dhaka, Bangladesh </li>
+                    <li className='li flex gap-3 items-center text-xl text-gray-400'><MdEmail></MdEmail> endgame.zero@gmail.com</li>
+                    <li className='li flex gap-3 items-center text-xl text-gray-400'><BsFillTelephoneFill></BsFillTelephoneFill> +205480857</li>
                 </ul>
             </section>
         </div>

@@ -7,10 +7,11 @@ import ToolsProducts from './ToolsProducts/ToolsProducts'
 const Home = () => {
     return (
         <div className='pb-8'>
+            
             <Banner></Banner>
             <ToolsProducts></ToolsProducts>
             <BusinessSummary></BusinessSummary>
-            <Reviews></Reviews>
+            {/* <Reviews></Reviews> */}
             
         </div>
     );

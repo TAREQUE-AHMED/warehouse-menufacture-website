@@ -9,9 +9,12 @@ const ToolsProducts = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='px-20'>
-            <h2 className='text-3xl text-center font-bold py-10'> Products</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3'>
+        <div className='px-20 py-10'>
+            <h2 className='text-3xl font-bold pt-10 text-primary'>Our Products</h2>
+            <div className='w-ful h-1 bg-gray-200 mt-5 mb-10 relative'>
+                <div className='w-48 h-1 bg-primary absolute'></div>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                 {
                     products.map(product => <ToolsProduct key={product._id} product={product}></ToolsProduct>).slice(0, 6)
                 }

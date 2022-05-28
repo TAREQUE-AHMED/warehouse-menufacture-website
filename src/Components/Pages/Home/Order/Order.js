@@ -12,7 +12,7 @@ const Order = () => {
     const { register, handleSubmit } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${orderId}`)
+        fetch(`http://aqueous-sierra-45726.herokuapp.com/order/${orderId}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data)
@@ -32,7 +32,7 @@ const Order = () => {
             address: data.address
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('http://aqueous-sierra-45726.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -2,31 +2,37 @@
     {
         "img": "https://img.freepik.com/free-photo/portrait-smiling-young-man-eyewear_171337-4842.jpg?size=626&ext=jpg&ga=GA1.2.198961957.1643011375",
         "name": "Shohel Khan",
-        "profession": "CEO OF SKl"
+        "profession": "CEO OF SKl",
+        "comment": "Your product quality is too much good."
     },
     {
         "img": "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg?size=626&ext=jpg&ga=GA1.2.198961957.1643011375",
         "name": "Rina Sultana",
-        "profession": "Adviser of SSK limited"
+        "profession": "Adviser of SSK limited",
+        "comment": "Your product is beautiful."
     },
     {
         "img": "https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?size=626&ext=jpg&ga=GA1.2.198961957.1643011375",
         "name": "Jhankar Mahabub",
-        "profession": "CEO OF PH"
+        "profession": "CEO OF PH",
+        "comment": "Your product capacity is high."
     },
     {
         "img": "https://img.freepik.com/free-photo/portrait-smiling-young-man-eyewear_171337-4842.jpg?size=626&ext=jpg&ga=GA1.2.198961957.1643011375",
         "name": "Imran Hasan",
-        "profession": "Head of Product"
+        "profession": "Head of Product",
+        "comment": "Your product quality is too much good."
     },
     {
         "img": "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg?size=626&ext=jpg&ga=GA1.2.198961957.1643011375",
         "name": "Kiron Ali",
-        "profession": "CEO OF IAS"
+        "profession": "CEO OF IAS",
+        "comment": "Your product quality is too much good."
     },
     {
         "img": "https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?size=626&ext=jpg&ga=GA1.2.198961957.1643011375",
         "name": "Labin Com",
-        "profession": "Senior MERN Developer OF VVC"
+        "profession": "Senior MERN Developer OF VVC",
+        "comment": "Your product quality is too much good."
     }
 ]

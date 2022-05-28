@@ -31,7 +31,7 @@ const AddReview = () => {
                 }
 
                 // send to server
-                fetch('http://localhost:5000/comments', {
+                fetch('http://aqueous-sierra-45726.herokuapp.com/comments', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json',

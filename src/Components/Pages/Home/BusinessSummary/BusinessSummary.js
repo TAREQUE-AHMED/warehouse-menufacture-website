@@ -7,7 +7,7 @@ import { MdOutlineEventAvailable } from "react-icons/md";
 
 const BusinessSummary = () => {
     return (
-        <section className='px-28'>
+        <section className='px-20'>
             <h2 className='text-3xl font-bold pt-10 text-primary'>Business Summary</h2>
             <div className='w-ful h-1 bg-gray-200 mt-5 mb-10 relative'>
                 <div className='w-60 h-1 bg-primary absolute'></div>

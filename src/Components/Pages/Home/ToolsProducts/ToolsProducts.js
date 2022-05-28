@@ -4,7 +4,7 @@ import Loading from '../../Share/Loading/Loading';
 import ToolsProduct from '../ToolsProduct/ToolsProduct';
 
 const ToolsProducts = () => {
-    const { data: products, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/products').then(res => res.json()));
+    const { data: products, isLoading } = useQuery('tools', () => fetch('http://aqueous-sierra-45726.herokuapp.com/products').then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>
     }

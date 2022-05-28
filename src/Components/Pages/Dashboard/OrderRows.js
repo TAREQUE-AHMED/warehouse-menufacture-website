@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
 
 const OrderRows = ({ myOrder, index }) => {
     const [deletingOrder, setDeletingOrder] = useState(null);
     const { Order,  quantity, totalAmount, _id } = myOrder;
     const handleDelete = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`http://aqueous-sierra-45726.herokuapp.com/orders/${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

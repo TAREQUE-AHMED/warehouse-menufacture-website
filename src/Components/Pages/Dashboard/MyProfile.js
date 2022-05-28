@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -20,7 +20,7 @@ const MyProfile = () => {
             education: data.education,
             facebook: data.facebook
         }
-            fetch(`http://localhost:5000/profile/${user?.email}`, {
+            fetch(`http://aqueous-sierra-45726.herokuapp.com/profile/${user?.email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

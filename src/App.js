@@ -12,6 +12,7 @@ import Header from './Components/Pages/Header/Header';
 import Home from './Components/Pages/Home/Home';
 // // import Order from './Components/Pages/Home/Order/Order';
 import NotFound from './Components/Pages/NotFound/NotFound';
+import Login from './Components/Pages/Share/Login/Login';
 // import Login from './Components/Pages/Share/Login/Login';
 // import RequireAuth from './Components/Pages/Share/RequireAuth/RequireAuth';
 // import SignUp from './Components/Pages/Share/SignUp/SignUp';
@@ -22,6 +23,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        
       {/*
         {/* <Route path='/order/:orderId' element={
           <RequireAuth>

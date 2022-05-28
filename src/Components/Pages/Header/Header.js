@@ -33,6 +33,7 @@ const Header = () => {
                 <ul className="menu menu-horizontal p-0">
                     <li className='text-2xl'><Link to={'/home'}>Home</Link></li>
                     <li className='text-2xl'><Link to={'/blogs'}>Blogs</Link></li>
+                    <li className='text-2xl'><Link to={'/login'}>Login</Link></li>
                 </ul>
                 {/* <Link to={'/home'} className="normal-case text-5xl block md:hidden"><img src={logo} className='w-32' alt="" /></Link> */}
             </div>

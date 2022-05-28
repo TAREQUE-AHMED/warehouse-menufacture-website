@@ -9,7 +9,7 @@ const Reviews = () => {
     // }
     const [comments, setComments] = useState([]);
     useEffect(() => {
-        fetch('http://aqueous-sierra-45726.herokuapp.com/comments')
+        fetch('https://aqueous-sierra-45726.herokuapp.com/comments')
             .then(res => res.json())
             .then(data => {
                 setComments(data)

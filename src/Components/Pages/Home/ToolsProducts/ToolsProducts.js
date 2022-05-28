@@ -11,7 +11,7 @@ const ToolsProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://aqueous-sierra-45726.herokuapp.com/products')
+        fetch('https://aqueous-sierra-45726.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
             setProducts(data)

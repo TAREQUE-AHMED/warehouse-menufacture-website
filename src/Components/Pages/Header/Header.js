@@ -1,18 +1,20 @@
-import { signOut } from 'firebase/auth';
+// import { signOut } from 'firebase/auth';
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../firebase.init';
-import logo from '../../images/thumb900.png';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { Link } from 'react-router-dom';
+// import auth from '../../firebase.init';
+// import logo from '../../images/thumb900.png';
 
 const Header = () => {
-    const [user] = useAuthState(auth);
-    const logout = () => {
-        signOut(auth);
-        localStorage.removeItem('accessToken')
-      };
+    // const [user] = useAuthState(auth);
+    // const logout = () => {
+    //     signOut(auth);
+    //     localStorage.removeItem('accessToken')
+    //   };
     return (
         <div className="navbar bg-base-100 px-20">
+            <h1>Header</h1>
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -25,16 +27,16 @@ const Header = () => {
                     <li className='text-2xl'><Link to={'/signup'}>Sign up</Link></li>
                 </ul>
                 </div>
-                <Link to={'/home'} className="normal-case text-5xl flex"><img src={logo} className='w-32' alt="" /></Link>
+                {/* <Link to={'/home'} className="normal-case text-5xl flex"><img src={logo} className='w-32' alt="" /></Link> */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li className='text-2xl'><Link to={'/home'}>Home</Link></li>
                     <li className='text-2xl'><Link to={'/blogs'}>Blogs</Link></li>
                 </ul>
-                <Link to={'/home'} className="normal-case text-5xl block md:hidden"><img src={logo} className='w-32' alt="" /></Link>
+                {/* <Link to={'/home'} className="normal-case text-5xl block md:hidden"><img src={logo} className='w-32' alt="" /></Link> */}
             </div>
-            <div className="navbar-end hidden md:block">
+            {/* <div className="navbar-end hidden md:block">
                 <ul className="menu menu-horizontal p-0 flex justify-center items-center">
                     <li className='text-2xl'>
                         {user ?
@@ -51,7 +53,7 @@ const Header = () => {
                         !user && <Link to={'/signup'}>Sign up</Link>
                     }</li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
 };

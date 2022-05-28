@@ -42,13 +42,13 @@ const Footer = () => {
                 <div className='bg-primary h-1 w-36 mt-5'></div>
                 <ul className='text-xl text-gray-400 pl-0 grid grid-cols-1 gap-2 pt-5'>
                     <li>
-                        <p className='text-xl text-gray-400'>Sun-Mon : 10am-5pm</p>
-                    </li>
-                    <li>
                         <p className='text-xl text-gray-400'>Tue-Wed : 10am-5pm</p>
                     </li>
                     <li>
                         <p className='text-xl text-gray-400'>Thus : 10am-5pm</p>
+                    </li>
+                    <li>
+                        <p className='text-xl text-gray-400'>Sun-Mon : 10am-5pm</p>
                     </li>
                     <li>
                         <p className='text-xl text-gray-400'>Fri-Sat : Off Day</p>

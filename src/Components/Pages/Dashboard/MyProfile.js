@@ -44,7 +44,7 @@ const MyProfile = () => {
             <h2 className='text-5xl text-secondary font-semibold'>My Profile</h2>
             <div className='bg-primary h-1 w-40  my-5'></div>
             <form className='grid grid-cols-1 md:grid-cols-2 gap-2' onSubmit={handleSubmit(onSubmit)}>
-                    {/* name */}
+                   
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text text-2xl font-bold">Name</span>
@@ -61,7 +61,7 @@ const MyProfile = () => {
                         </label>
                     </div>
                     
-                    {/* email */}
+                    
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text text-xl font-bold">Email</span>
@@ -77,7 +77,7 @@ const MyProfile = () => {
                             {errors.email?.type === 'required' && <span className="label-text text-xl-alt text-red-500">{errors.email.message}</span>}
                         </label>
                     </div>
-                    {/* phone */}
+                    
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text text-xl font-bold">Phone</span>
@@ -94,7 +94,6 @@ const MyProfile = () => {
                         </label>
                     </div>
                 
-                    {/* education */}
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text text-xl font-bold">Education</span>
@@ -108,7 +107,6 @@ const MyProfile = () => {
                              })} />
                     </div>
                 
-                    {/* location */}
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text text-xl font-bold">Location</span>

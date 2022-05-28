@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const OrdersRow = ({ myOrder, index }) => {
+const OrderRows = ({ myOrder, index }) => {
     const [deletingOrder, setDeletingOrder] = useState(null);
     const { Order,  quantity, totalAmount, _id } = myOrder;
     const handleDelete = id => {
@@ -27,4 +27,4 @@ const OrdersRow = ({ myOrder, index }) => {
     );
 };
 
-export default OrdersRow;
+export default OrderRows;

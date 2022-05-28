@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CarBroProduct.css';
+import './ToolsProduct.css';
 
-const CarBroProduct = ({ product }) => {
+const ToolsProduct = ({ product }) => {
     const { name, img, minimumQuantity, available, price, shotDescription, _id } = product;
     const navigate = useNavigate();
 
@@ -30,4 +30,4 @@ const CarBroProduct = ({ product }) => {
     );
 };
 
-export default CarBroProduct;
+export default ToolsProduct;

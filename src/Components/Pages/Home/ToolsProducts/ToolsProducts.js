@@ -1,13 +1,23 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../../Share/Loading/Loading';
+import React, { useEffect, useState } from 'react';
+// import { useQuery } from 'react-query';
+// import Loading from '../../Share/Loading/Loading';
 import ToolsProduct from '../ToolsProduct/ToolsProduct';
 
 const ToolsProducts = () => {
-    const { data: products, isLoading } = useQuery('tools', () => fetch('http://aqueous-sierra-45726.herokuapp.com/products').then(res => res.json()));
-    if (isLoading) {
-        return <Loading></Loading>
-    }
+    // const { data: products, isLoading } = useQuery('tools', () => fetch('http://aqueous-sierra-45726.herokuapp.com/products').then(res => res.json()));
+    // if (isLoading) {
+    //     return <Loading></Loading>
+    // }
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://aqueous-sierra-45726.herokuapp.com/products')
+            .then(res => res.json())
+            .then(data => {
+            setProducts(data)
+        })
+    }, [])
+
     return (
         <div className='px-20 py-10'>
             <h2 className='text-3xl font-bold pt-10 text-primary'>Our Products</h2>

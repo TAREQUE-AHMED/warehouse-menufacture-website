@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../Share/Loading/Loading';
 
 const Reviews = () => {
-    const { data: comments, isLoading } = useQuery('comments', () => fetch('http://aqueous-sierra-45726.herokuapp.com/comments').then(res => res.json()));
-    if (isLoading) {
-        return <Loading></Loading>
-    }
+    // const { data: comments, isLoading } = useQuery('comments', () => fetch('http://aqueous-sierra-45726.herokuapp.com/comments').then(res => res.json()));
+    // if (isLoading) {
+    //     return <Loading></Loading>
+    // }
+    const [comments, setComments] = useState([]);
+    useEffect(() => {
+        fetch('http://aqueous-sierra-45726.herokuapp.com/comments')
+            .then(res => res.json())
+            .then(data => {
+                setComments(data)
+            })
+    }, [])
     return (
         <div className='px-20'>
             <h2 className='text-3xl font-bold pt-10 text-primary'>Reviews</h2>

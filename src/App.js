@@ -9,6 +9,7 @@ import AddReview from './Components/Pages/Dashboard/AddReviews';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin';
 import ManageAllOrders from './Components/Pages/Dashboard/ManageAllOrders';
+import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts';
 import MyOrders from './Components/Pages/Dashboard/MyOrder';
 import MyProfile from './Components/Pages/Dashboard/MyProfile';
 import Footer from './Components/Pages/Footer/Footer';
@@ -32,11 +33,12 @@ function App() {
       <Route path='/registration' element={<Registration></Registration>}></Route>
       <Route path='/products/:orderId' element={<Order></Order>}></Route>
       <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
-            <Route index element={<MyProfile></MyProfile>}></Route>
-            <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='addProduct' element={<AddNewProduct></AddNewProduct>}></Route>
           <Route path='manageOrders' element={<ManageAllOrders></ManageAllOrders>}></Route>
+          <Route path='manageProduct' element={<ManageAllProducts></ManageAllProducts>}></Route>
           <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
             {/* <Route path='payment/:id' element={<Payment></Payment>}></Route> */}
             {/* <Route path='manageProducts' element={
@@ -49,7 +51,7 @@ function App() {
                 <ManageAllOrders></ManageAllOrders>
               </RequireAdmin>
               }>
-            </Route>
+            </Route>git
             <Route path='addProduct' element={
               <RequireAdmin>
                 <AddProduct></AddProduct>

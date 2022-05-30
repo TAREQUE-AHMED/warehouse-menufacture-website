@@ -6,8 +6,9 @@ import Loading from '../Share/Loading/Loading';
 import OrderRows from './OrderRows';
 
 const MyOrders = () => {
-    const [user] = useAuthState(auth)
-    const { data: orders, isLoading } = useQuery('orders', () => fetch(`http://aqueous-sierra-45726.herokuapp.com/orders?email=${user?.email}`, {
+    const [user] = useAuthState(auth);
+    const email = user.email;
+    const { data: orders, isLoading } = useQuery('orders', () => fetch(`http://localhost:5000/orders`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -31,7 +32,6 @@ const MyOrders = () => {
                         <th></th>
                         <th>Name</th>
                         <th>Quantity</th>
-                        <th>Total Price</th>
                         <th>Action</th>
                     </tr>
                     </thead>

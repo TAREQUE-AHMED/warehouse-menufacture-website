@@ -1,3 +1,25 @@
+## Laptop pro
+## website link: https://laptop-manufacture.firebaseapp.com/
+### website review :: 
+This is the laptop parts Manufacture websites. In header part we see 4 pages(Home, Blogs, banner, Login, Sign). Secondly, In the Home page, we see a header (simple navbar), banner and Our Products (tools that you are managing. Maximum 6 items),Business Summary, Review , Hot Event, Available Brand and Footer[update in future]
+- In the Blogs page, answer of question.
+- banner 
+- In the Login page, you want to be create a new account and you have an account then you login and In sign page you create a new user.
+- When your are valid user you see dashboard. In dashboard, you see some nested route. If you are user , you see my orders and add review route(admin can't see those). If you are admin, you see manage orders, manage all products, add new product and make admin route(not allow for user). And My Profile allow all.
+
+##### frameworks and libraries use in my project.
+- React(Libraries)
+- react bootstrap
+- tailwind (css frameworks)
+- daisy ui (react component)
+- React Router 
+- React Firebase Hooks
+- Firebase(console.firebase.google.com)
+- Heroku
+- React hooks form
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const OrderRows = ({ myOrder, index }) => {
     const [deletingOrder, setDeletingOrder] = useState(null);
-    const { Order,  quantity, totalAmount, _id } = myOrder;
+    const { Order,  quantity, _id } = myOrder;
     const handleDelete = id => {
         fetch(`http://aqueous-sierra-45726.herokuapp.com/orders/${id}`, {
             method: "DELETE",
@@ -20,7 +20,6 @@ const OrderRows = ({ myOrder, index }) => {
             <th>{index + 1}</th>
             <td>{Order}</td>
             <td>{quantity}</td>
-            <td>{totalAmount}</td>
             <td><button onClick={() => handleDelete(_id)} className="btn btn-xs btn-primary">Delete</button></td>
         </tr>
     );

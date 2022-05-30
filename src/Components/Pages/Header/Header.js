@@ -1,6 +1,9 @@
 // import { signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../Share/firebase.init';
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { Link } from 'react-router-dom';
 // import auth from '../../firebase.init';
@@ -12,6 +15,11 @@ const Header = () => {
     //     signOut(auth);
     //     localStorage.removeItem('accessToken')
     //   };
+    const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth)
+    };
+
     return (
         <div className="navbar bg-base-100 px-20">
             <h1 className='text-3xl text-primary font-bold'>Laptop Pro</h1>
@@ -33,7 +41,17 @@ const Header = () => {
                 <ul className="menu menu-horizontal p-0">
                     <li className='text-2xl'><Link to={'/home'}>Home</Link></li>
                     <li className='text-2xl'><Link to={'/blogs'}>Blogs</Link></li>
-                    <li className='text-2xl'><Link to={'/login'}>Login</Link></li>
+                    <li className='text-2xl'>
+                        {
+                            user &&  <Link to={'/dashboard'}>Dashboard</Link>
+                        }
+                    </li>
+                    <li className='text-2xl'><Link to={'/login'}>
+                        {
+                            user ? 
+                            <button onClick={logout}>Logout</button> : <Link to={'/login'}>Login </Link>
+                        }
+                    </Link></li>
                 </ul>
                 {/* <Link to={'/home'} className="normal-case text-5xl block md:hidden"><img src={logo} className='w-32' alt="" /></Link> */}
             </div>

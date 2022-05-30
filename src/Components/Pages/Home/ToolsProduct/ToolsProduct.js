@@ -7,7 +7,7 @@ const ToolsProduct = ({ product }) => {
     const navigate = useNavigate();
 
     const navigateOrder = orderId => {
-        navigate(`/order/${orderId}`)
+        navigate(`/products/${orderId}`)
     }
 
     return (

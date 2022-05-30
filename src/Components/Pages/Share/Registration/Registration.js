@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ import Loading from '../Loading/Loading';
 
 const Registration = () => {
     const navigate = useNavigate();
+    const [users, setUsers] = useState([]);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -21,6 +22,22 @@ const Registration = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     
     const onSubmit = async (data) => {
+        const user = {
+            userName: data.name,
+            userEmail: data.email
+        }
+        fetch('http://localhost:5000/users', {
+            method: "POST",
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json()) 
+            .then(data => {
+            console.log(data);
+        })
+        
         console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name ,});

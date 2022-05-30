@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
+import auth from '../Share/firebase.init';
 
 const MyProfile = () => {
     const [profiles, setProfile] = useState('');
@@ -35,15 +35,8 @@ const MyProfile = () => {
     }
     return (
         <div className='p-10 w-full h-screen'>
-            <div className="text-sm breadcrumbs text-primary">
-                <ul>
-                    <li>DashBoard</li> 
-                    <li>My Profile</li>
-                </ul>
-            </div>
-            <h2 className='text-5xl text-secondary font-semibold'>My Profile</h2>
-            <div className='bg-primary h-1 w-40  my-5'></div>
-            <form className='grid grid-cols-1 md:grid-cols-2 gap-2' onSubmit={handleSubmit(onSubmit)}>
+            <h2 className='text-5xl text-primary font-semibold'>My Profile</h2>
+            <form className='grid grid-cols-1 gap-2 w-1/2 mx-auto' onSubmit={handleSubmit(onSubmit)}>
                    
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

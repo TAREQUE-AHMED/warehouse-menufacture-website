@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import auth from '../../../firebase.init';
+import auth from '../../Share/firebase.init';
+import Loading from '../../Share/Loading/Loading';
 
 const Order = () => {
     const [user] = useAuthState(auth);
     const { orderId } = useParams();
-    const [orders, setOrders] = useState({});
 
-    const { register, handleSubmit } = useForm();
+    const { register,formState: { errors }, handleSubmit } = useForm();
 
-    useEffect(() => {
-        fetch(`http://aqueous-sierra-45726.herokuapp.com/order/${orderId}`)
-            .then(res => res.json())
-            .then(data => {
-                setOrders(data)
-            })
-    }, [user]);
+    const { data: orders, isLoading } = useQuery('product orders', () => fetch(`http://localhost:5000/products/${orderId}`).then(res => res.json()));
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     const onSubmit = data => {
         console.log(data);
@@ -32,7 +31,7 @@ const Order = () => {
             address: data.address
         }
 
-        fetch('http://aqueous-sierra-45726.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -43,11 +42,6 @@ const Order = () => {
         .then(data => {
             console.log(data);
         })
-        // if (data.quantity >= order.minimumQuantity && data.quantity <= order.available) {
-        //     toast('Your order is done')
-        // } else {
-        //     toast(`You minimum orders ${order.minimumQuantity} and can't orders ${order.available}`)
-        // }
     };
 
     return (
@@ -72,24 +66,7 @@ const Order = () => {
                         <label className='text-xl' htmlFor="#quantity">Quantity : </label>         
                         <input id='quantity' name='quantity' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type="number" {...register("quantity", { min: `${orders?.minimumQuantity}`, max: `${orders?.available}` })} />
                         
-                        <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} />
-                        <div className="card-actions justify-end">
-                            <label htmlFor="order-details-modal" className="btn modal-button">Product Details</label>
-                        </div>
-                        
-                        {/* <!-- The button to open modal --> */}
-                        <input type="checkbox" id="order-details-modal" className="modal-toggle" />
-                        <div className="modal">
-                        <div className="modal-box relative">
-                            <label htmlFor="order-details-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                            <img src={orders.img} alt="" />
-                            <h3 className="font-bold text-3xl">Product Name : {orders.name}</h3>
-                            <p className="pt-4 text-xl">Message : {orders.shotDescription}</p>
-                            <p className="pt-1 text-2xl font-bold">Minimum {orders.minimumQuantity>1? 'Orders': 'Order'} : {orders.minimumQuantity}</p>
-                            <p className="pt-1 text-2xl">Available : {orders.available}</p>
-                            <p className="pt-1 text-2xl">Per Price : <span className='text-primary'>{orders.price}</span></p>
-                        </div>
-                        </div>
+                        <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} disabled={errors?.message === 'min' && errors?.message === 'max'} />
                     </form>
                 </div>
                 </div>

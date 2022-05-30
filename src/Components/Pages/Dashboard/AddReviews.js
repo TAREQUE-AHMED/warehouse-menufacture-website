@@ -31,7 +31,7 @@ const AddReview = () => {
                 }
 
                 // send to server
-                fetch('http://aqueous-sierra-45726.herokuapp.com/comments', {
+                fetch('http://localhost:5000/comments', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json',
@@ -53,15 +53,8 @@ const AddReview = () => {
     };
     return (
         <div className='pl-5 h-screen my-5'>
-            <div className="text-sm breadcrumbs text-primary">
-                <ul>
-                    <li>DashBoard</li> 
-                    <li>Add A Review</li>
-                </ul>
-            </div>
-            <h2 className='text-5xl text-secondary font-semibold'>Add A Review</h2>
-            <div className='bg-primary h-1 w-60  my-5'></div>
-            <form className='grid md:grid-cols-2 gap-2' onSubmit={handleSubmit(onSubmit)}>
+            <h2 className='text-5xl text-primary font-semibold'>Add A Review</h2>
+            <form className='grid grid-cols-1 gap-2' onSubmit={handleSubmit(onSubmit)}>
                     {/* name */}
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

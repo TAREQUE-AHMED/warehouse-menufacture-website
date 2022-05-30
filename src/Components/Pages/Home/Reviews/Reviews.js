@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../../Share/Loading/Loading';
 
 const Reviews = () => {
     // const { data: comments, isLoading } = useQuery('comments', () => fetch('http://aqueous-sierra-45726.herokuapp.com/comments').then(res => res.json()));
@@ -24,11 +22,11 @@ const Reviews = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20'>
                 {
                     comments.map(comment => 
-                        <div class="carousel w-full">
-                                <div class="card card-compact bg-base-100 shadow-xl">
+                        <div className="carousel w-full">
+                                <div className="card card-compact bg-base-100 shadow-xl">
                                     <figure><img src={comment.img} alt="Shoes" /></figure>
-                                    <div class="card-body">
-                                        <h2 class="card-title">{comment.name}</h2>
+                                    <div className="card-body">
+                                        <h2 className="card-title">{comment.name}</h2>
                                         <p>Comment : {comment.comment}</p>
                                         <p>Profession : {comment.profession}</p>
                                     </div>

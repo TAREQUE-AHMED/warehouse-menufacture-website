@@ -1,12 +1,13 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import Loading from '../../Share/Loading/Loading';
-import UsersRow from './UsersRow';
+import Loading from '../Share/Loading/Loading';
+import UsersRow from './UserRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('make admin', () => fetch('https://limitless-forest-21583.herokuapp.com/user', {
+    const { data: users, isLoading, refetch } = useQuery('make admin', () => fetch('http://localhost:5000/users', {
         method: "GET",
         headers: {
+            'content-type': 'application/json',
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()));

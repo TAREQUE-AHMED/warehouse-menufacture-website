@@ -1,10 +1,10 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Share/Loading/Loading';
-import OrderRows from './OrderRows';
+import AllOrdersRow from './AllOrdersRow';
 
 const ManageAllOrders = () => {
-    const { data: orders, isLoading, refetch } = useQuery('manage orders', () => fetch('https://limitless-forest-21583.herokuapp.com/orders', {
+    const { data: orders, isLoading, refetch } = useQuery('manage orders', () => fetch('http://localhost:5000/orders', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -40,7 +40,7 @@ const ManageAllOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <OrderRows  key={order._id} ord={order} index={index} refetch={refetch}></OrderRows>)
+                            orders.map((order, index) => <AllOrdersRow  key={order._id} ord={order} index={index} refetch={refetch}></AllOrdersRow>)
                         }
                     </tbody>
             </table>

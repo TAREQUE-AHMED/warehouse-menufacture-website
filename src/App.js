@@ -7,6 +7,8 @@ import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct';
 // import Blogs from './Components/Pages/Blogs/Blogs';
 import AddReview from './Components/Pages/Dashboard/AddReviews';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin';
+import ManageAllOrders from './Components/Pages/Dashboard/ManageAllOrders';
 import MyOrders from './Components/Pages/Dashboard/MyOrder';
 import MyProfile from './Components/Pages/Dashboard/MyProfile';
 import Footer from './Components/Pages/Footer/Footer';
@@ -34,6 +36,8 @@ function App() {
             <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='addProduct' element={<AddNewProduct></AddNewProduct>}></Route>
+          <Route path='manageOrders' element={<ManageAllOrders></ManageAllOrders>}></Route>
+          <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
             {/* <Route path='payment/:id' element={<Payment></Payment>}></Route> */}
             {/* <Route path='manageProducts' element={
               <RequireAdmin>

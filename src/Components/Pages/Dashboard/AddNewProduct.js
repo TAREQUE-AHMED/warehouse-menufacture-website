@@ -30,7 +30,7 @@ const AddNewProduct = () => {
     };
     return (
         <div className='pl-5 my-5 pb-5'>
-            <h2 className='text-5xl text-secondary font-semibold'>Add A New Product</h2>
+            <h2 className='text-5xl text-primary font-semibold text-center'>Add A New Product</h2>
             <div className="card w-1/2 mx-auto bg-base-100 shadow-xl">
                 <div className="card-body">
                 <form className='grid grid-cols-1' onSubmit={handleSubmit(onSubmit)}>
